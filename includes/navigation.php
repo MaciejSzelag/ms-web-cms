@@ -16,7 +16,8 @@
                 <ul>
                     <li class="nav-li"><a href="index.php"> Home </a></li>
                     <li class="nav-li"><a href="contact.php"> Contact </a></li>
-
+                    <li class="nav-li"><a href="login.php"> Login </a></li>
+                    <li class="nav-li"><a href="admin/"> Admin Dashboard </a></li>
 
 
                 </ul>

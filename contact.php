@@ -11,14 +11,30 @@
         </div>
         <div class="contact text-form">
             <div class="box-contact">
-                <div class="box-contact-content">
-                    <h3>Email:</h3>
-                    <a href="mailto:szelag.maciej@gmail.com"><i class="fas fa-at"></i> <span> szleg.maciej@gmail.com</span></a>
-                </div>
-                <div class="box-contact-content">
-                    <h3>Phone:</h3>
-                    <a href="tel:077777777"><i class="fas fa-mobile-alt"></i> <span> +44 7741 12453</span></a>
-                </div>
+            <?php
+                $query = "SELECT * FROM my_contact_deteils";
+                $select_contact_details = mysqli_query($connection, $query);
+                while( $contact_details_row = mysqli_fetch_assoc($select_contact_details)){
+                    $type_of_contact = $contact_details_row['type_of_contact'];
+                    $contact_details = $contact_details_row['contact_details'];
+                        if($type_of_contact == "Email"){
+                            echo '<div class="box-contact-content">
+                                    <h3>Email:</h3>
+                                    <a href="mailto:'.$contact_details.'"><i class="fas fa-at"></i><span>'.$contact_details.'</span></a>
+                                   </div>';
+                        }else if($type_of_contact == "Phone"){
+                            echo '<div class="box-contact-content">
+                                    <h3>Phone:</h3>
+                                    <a href="tel:'.$contact_details.'"><i class="fas fa-at"></i><span>'.$contact_details.'</span></a>
+                                  </div>';
+                        }
+                }                      
+            ?>
+
+
+
+
+
             </div>
             <div class="box-contact-form">
                 <form action="">

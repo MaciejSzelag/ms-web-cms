@@ -1178,6 +1178,82 @@ header .header-wrap .header-part .img-container img {
   }
 }
 
+.login-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, white), to(#1d60a3));
+  background-image: linear-gradient(0deg, white 20%, #1d60a3);
+}
+
+.login-wrap form {
+  padding: 100px 200px;
+  -webkit-box-shadow: 0 0 20px 1px #1d60a3;
+          box-shadow: 0 0 20px 1px #1d60a3;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.login-wrap form h1 {
+  color: #1d60a3;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.login-wrap form .input-group {
+  padding: 10px;
+}
+
+.login-wrap form .input-group .label-wrap {
+  color: rgba(128, 128, 128, 0.603);
+}
+
+.login-wrap form .input-group .input-wrap {
+  padding-top: 5px;
+}
+
+.login-wrap form .input-group .input-wrap input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #1d60a3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: white;
+}
+
+.login-wrap form .input-group .input-wrap input::-webkit-input-placeholder {
+  color: rgba(128, 128, 128, 0.403);
+}
+
+.login-wrap form .input-group .input-wrap input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.403);
+}
+
+.login-wrap form .input-group .input-wrap input::-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.403);
+}
+
+.login-wrap form .input-group .input-wrap input::placeholder {
+  color: rgba(128, 128, 128, 0.403);
+}
+
+.login-wrap form .input-group .input-wrap input[type=submit] {
+  padding: 5px 30px;
+  border-radius: 5px;
+  background-color: #1d60a3;
+  color: white;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
