@@ -19,7 +19,9 @@
                 case "contact-form-table";
                 include "includes/contact-form-table.php";
                 break;
-
+                case "admin-categories";
+                include "includes/admin-categories.php";
+                break;
                 default: 
                 include "includes/admin_dashboard.php";
                 break;

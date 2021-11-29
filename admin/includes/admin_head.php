@@ -1,4 +1,5 @@
 <?php include "../includes/db.php"; ?>
+<?php include "functions.php"; ?>
 <?php ob_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +22,7 @@
             <li><a href="../admin/">Dashboard</a></li>
             <li><a href="index.php?source=contact-details">Contact Details</a></li>
             <li><a href="index.php?source=contact-form-table">Contact form </a></li>
+            <li><a href="index.php?source=admin-categories">Categories </a></li>
             
         </ul>
     </div>

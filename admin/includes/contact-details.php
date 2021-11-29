@@ -1,4 +1,3 @@
-
 <div class="container">
 <h1>My contact details</h1>
     <div class="table-wrap">
@@ -39,30 +38,16 @@
                 </div>
             </form>
 
-
-
-
 <!-- edit item -->
-
-
-
-
-
-
 <?php 
     if(isset($_GET['edit'])){
         $contact_id = $_GET['edit'];
         $query = "SELECT * FROM my_contact_deteils WHERE id = $contact_id";
         $select_contact_details_query = mysqli_query($connection, $query);
-        
         $row_edit = mysqli_fetch_assoc($select_contact_details_query);
         $detail_id =$row_edit['id'];
         $type_of_contact = $row_edit['type_of_contact'];
         $contact_details = $row_edit['contact_details'];
-
-
- 
-
 ?>
             <form action="" method="post">
                 <h3>Edit contact</h3>
@@ -85,42 +70,24 @@
                     <input type="submit" name="update" value="Update contact">
                 </div>
             </form>
-
-
-
-
             <?php
                 if(isset($_POST['update'])){
                     $type_of_contact = $_POST['type_of_contact'];
                     $contact_details = $_POST['contact_details'];
-
                     $type_of_contact = mysqli_real_escape_string($connection, $type_of_contact);
                     $contact_details = mysqli_real_escape_string($connection, $contact_details);
-                    
                     $query = "UPDATE my_contact_deteils SET type_of_contact = '$type_of_contact', contact_details = '$contact_details' WHERE id = $contact_id";
                     $update_query = mysqli_query($connection, $query);
-
                     if(!$update_query){
                         die(mysqli_error($connection));
                     }
                     $type_of_contact = "";
                     $contact_details = "";
-
                 }
             ?>
-
 <?php   } ?>
-
 <!-- edit item -->
-
-
-
-
-
         </div>
-
-
-        
         <table class="small"> 
             <thead>
                 <tr>
@@ -131,7 +98,6 @@
                 </tr>
             </thead>
             <tbody>
-
             <?php 
             $query = "SELECT * FROM my_contact_deteils";
             $select_contact_details = mysqli_query($connection, $query);
@@ -139,39 +105,18 @@
                 $detail_id =$contact_details_row['id'];
                 $type_of_contact = $contact_details_row['type_of_contact'];
                 $contact_details = $contact_details_row['contact_details'];
-
-           
             ?>
             <tr>
                     <td><?php echo $type_of_contact; ?> </td>
                     <td><?php echo $contact_details; ?></td>
-                  
                     <td><a href="index.php?source=contact-details&edit=<?php echo $detail_id;?>">Edit</a></td>
                     <td><a href="index.php?source=contact-details&delete=<?php echo $detail_id;?>">Delete</a></td>
-             
-                </tr>
-
+            </tr>
+                <?php 
+                deletePosition($detail_id, 'my_contact_deteils','id', 'index.php?source=contact-details');
+                ?>
             <?php } ?>
-            <?php 
-            if(isset($_GET['delete'])){
-                    $contact_id = $_GET['delete'];
-
-                    $query = "DELETE FROM my_contact_deteils WHERE id = $contact_id";
-                    $delete_item_id = mysqli_query($connection, $query);
-                    if(!$delete_item_id){
-                            die(mysqli_error($connection));
-                    }
-                    header("Location: index.php?source=contact-details");
-
-            }
-
-            ?>
-           
             </tbody>
         </table>
     </div>
-    
-
-
 </div>
-

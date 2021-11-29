@@ -36,8 +36,41 @@
 
 
             </div>
+
+
+
+
+            <?php
+
+            if(isset($_POST['submit'])){
+
+                $category_name = $_POST['category_name'];
+                $visitor_name = $_POST['visitor_name'];
+                $visitor_phone_number = $_POST['visitor_phone_number'];
+                $visitor_email = $_POST['visitor_email'];
+                $visitor_message = $_POST['visitor_message'];
+                $status = 'Unread';
+
+                $category_name = mysqli_real_escape_string($connection,$category_name);
+                $visitor_name = mysqli_real_escape_string($connection,$visitor_name );
+                $visitor_phone_number = mysqli_real_escape_string($connection,$visitor_phone_number);
+                $visitor_email =mysqli_real_escape_string($connection,$visitor_email);
+                $visitor_message = mysqli_real_escape_string($connection,$visitor_message);
+                $query = "INSERT INTO msweb_contact_form(category_name,visitor_name,visitor_phone_no,visitor_email,visitor_message,visitor_message_date, msg_status) VALUES('$category_name','$visitor_name','$visitor_phone_number', '$visitor_email', '$visitor_message', now() ,'$status')";
+                $insert_visitor_message_query = mysqli_query($connection,$query);
+
+                if(!$insert_visitor_message_query){
+                    die(mysqli_error($connection));
+                }
+
+
+
+            }
+
+
+            ?>
             <div class="box-contact-form">
-                <form action="">
+                <form action="" method="post">
                     <h1>Contact form</h1>
                     <!-- Category -->
                     <div class="input-group">
@@ -45,13 +78,22 @@
                             <label for="">Category</label>
                         </div>
                         <div class="input-wrap">
-                            <select name="" id="">
-                                <option value="">Select category</option>
-                                <option value="">One page</option>
-                                <option value="">Single page</option>
-                                <option value="">One page + CMS</option>
-                                <option value="">Single page + CMS</option>
-                                <option value="">Other</option>
+
+          
+
+                            <select name="category_name" id="">
+                            <?php 
+            
+                                    $query = "SELECT * FROM categories_name";
+                                    $select_category_query = mysqli_query($connection, $query);
+                                    
+                                while($row_category = mysqli_fetch_assoc($select_category_query)){;
+                                    $category_name =$row_category['category_name'];
+                        
+
+                                ?>
+                                <option value="<?php echo $category_name; ?>"><?php echo $category_name; ?></option>
+                            <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -62,7 +104,7 @@
                             <label for="">Name</label>
                         </div>
                         <div class="input-wrap">
-                            <input type="text" name="client_name"placeholder="Name" required>
+                            <input type="text" name="visitor_name"placeholder="Name" required>
                         </div>
                     </div>
                     <!-- name -->
@@ -72,7 +114,7 @@
                             <label for="">Phone number</label>
                         </div>
                         <div class="input-wrap">
-                            <input type="number" name="client_phone" placeholder="Phone number" required>
+                            <input type="number" name="visitor_phone_number" placeholder="Phone number" required>
                         </div>
                     </div>
                     <!-- phone number -->
@@ -82,7 +124,7 @@
                             <label for="">E-mail</label>
                         </div>
                         <div class="input-wrap">
-                            <input type="text" name="client_name" placeholder="e-mail" required> 
+                            <input type="text" name="visitor_email" placeholder="e-mail" required> 
                         </div>
                     </div>
                     <!-- email -->
@@ -92,7 +134,7 @@
                             <label for="">Message</label>
                         </div>
                         <div class="input-wrap">
-                            <textarea name="client_message" id="" cols="30" rows="10" required></textarea>
+                            <textarea name="visitor_message" id="" cols="30" rows="10" required></textarea>
                         </div>
                     </div>
                     <!-- text area -->
@@ -100,7 +142,7 @@
                     <div class="input-group">
 
                         <div class="input-wrap">
-                            <input type="submit">
+                            <input type="submit" name="submit" value="Send">
                         </div>
                     </div>
                     <!-- submit -->

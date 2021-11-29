@@ -135,8 +135,10 @@ nav .nav-wrap-top {
 
 .container .table-wrap table {
   font-family: arial, sans-serif;
-  border-collapse: collapse;
   width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #b9c9fe;
 }
 
 .container .table-wrap table thead tr {
@@ -147,16 +149,30 @@ nav .nav-wrap-top {
   text-align: center;
 }
 
+.container .table-wrap table tr {
+  margin: 5px 0;
+  background-color: #b9c9fe;
+}
+
 .container .table-wrap table td,
 .container .table-wrap table th {
+  width: auto;
   border: 1px solid rgba(221, 221, 221, 0.199);
   text-align: left;
   padding: 8px;
+  border-radius: 5px;
 }
 
 .container .table-wrap table td {
+  text-align: center;
+  min-width: 150px;
   background-color: #e8edff;
   font-size: 15px;
+}
+
+.container .table-wrap table .td-id {
+  min-width: 50px;
+  background-color: rgba(185, 201, 254, 0.5);
 }
 
 .container .table-wrap table .text-content {
