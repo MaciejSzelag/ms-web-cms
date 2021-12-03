@@ -75,12 +75,31 @@ nav {
     }
 
     .nav-wrap-top {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         position: fixed;
         top: 0;
         left: $navWidth;
         width: calc(100% - #{$navWidth});
         height: $topNavHeight;
         background-color: $darkGrey;
+
+        h1 {
+            color: white;
+        }
+
+        .date-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 30px;
+
+            p {
+                color: white;
+            }
+        }
     }
 }
 
@@ -97,4 +116,45 @@ nav {
 
     }
 
+}
+
+
+
+
+
+
+@media(max-width: 1024px) {
+    $navWidth: 0px;
+
+    nav {
+        left: -45%;
+        width: 50%;
+        transition: .5s linear;
+
+        .nav-wrap-top {
+            left: $navWidth;
+            width: calc(100% - #{$navWidth});
+
+        }
+    }
+
+    nav:hover {
+        left: 0;
+    }
+
+    .admin-wrap {
+        width: calc(100% - #{$navWidth});
+
+        margin-top: $topNavHeight;
+        margin-left: $navWidth;
+
+
+        .row {
+
+            min-height: calc(100vh - #{$topNavHeight});
+
+
+        }
+
+    }
 }

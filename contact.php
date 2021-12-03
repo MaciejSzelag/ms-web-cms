@@ -25,7 +25,7 @@
                         }else if($type_of_contact == "Phone"){
                             echo '<div class="box-contact-content">
                                     <h3>Phone:</h3>
-                                    <a href="tel:'.$contact_details.'"><i class="fas fa-at"></i><span>'.$contact_details.'</span></a>
+                                    <a href="tel:'.$contact_details.'"><i class="fas fa-mobile-alt"></i><span>'.$contact_details.'</span></a>
                                   </div>';
                         }
                 }                      

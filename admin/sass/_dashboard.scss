@@ -1,0 +1,46 @@
+.dash-head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+
+    .dash-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 220px;
+        height: 140px;
+        // box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.514);
+        filter: drop-shadow(0 0 5px rgb(170, 170, 170));
+        background-color: whitesmoke;
+        border-radius: 0 10px 10px 10px;
+
+        a {
+            color: black;
+            text-decoration: none;
+
+
+            .icon-wrap {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                position: absolute;
+                top: -20px;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                background-color: whitesmoke;
+                border-radius: 10px 10px 0 0;
+
+                i {
+                    font-size: 16px;
+                    color: $colorBlue;
+                }
+            }
+        }
+    }
+}

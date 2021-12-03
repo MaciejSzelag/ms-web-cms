@@ -22,6 +22,12 @@
                 case "admin-categories";
                 include "includes/admin-categories.php";
                 break;
+                case "table-visits-by-ip";
+                include "includes/table-visits-by-ip.php";
+                break;
+                case "show-message";
+                include "includes/show-message.php";
+                break;
                 default: 
                 include "includes/admin_dashboard.php";
                 break;

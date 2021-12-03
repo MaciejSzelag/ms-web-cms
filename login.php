@@ -3,7 +3,6 @@
 <div class="content">
     <div class="row">
         <div class="login-wrap">
-
             <form action="">
                 <h1>Login</h1>
                 <div class="input-group">
@@ -29,11 +28,6 @@
                 </div>
             </form>
         </div>
-
     </div>
 </div>
-
-
-
-
 <?php  include "includes/footer.php"; ?>

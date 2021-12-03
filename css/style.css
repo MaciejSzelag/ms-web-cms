@@ -1077,6 +1077,7 @@ header .header-wrap .header-part .img-container img {
 
 .contact-page .contact-wrap .text-form .box-contact .box-contact-content a i {
   color: #d4d4d4;
+  margin-right: 15px;
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -1190,14 +1191,12 @@ header .header-wrap .header-part .img-container img {
           align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, white), to(#1d60a3));
-  background-image: linear-gradient(0deg, white 20%, #1d60a3);
 }
 
 .login-wrap form {
   padding: 100px 200px;
-  -webkit-box-shadow: 0 0 20px 1px #1d60a3;
-          box-shadow: 0 0 20px 1px #1d60a3;
+  -webkit-box-shadow: 0 0 20px 1px #b3b3b3;
+          box-shadow: 0 0 20px 1px #b3b3b3;
   border-radius: 10px;
   background-color: white;
 }
