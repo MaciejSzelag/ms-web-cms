@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sen&family=Shrikhand&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -778,6 +778,10 @@ header .header-wrap .header-part .img-container img {
   transition: 1s linear;
 }
 
+header .header-wrap .header-part .img-container .img-2 {
+  width: 50%;
+}
+
 @media (max-width: 1440px) {
   header .header-wrap .header-part .text-title-wrap h1 {
     margin: 50px 0;
@@ -869,6 +873,166 @@ header .header-wrap .header-part .img-container img {
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
   }
+}
+
+.page-head {
+  height: auto;
+  padding: 50px;
+}
+
+.page-head .page-title,
+.page-head .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.page-head .page-title {
+  padding: 50px 0;
+}
+
+.page-head .page-title .row {
+  width: 70%;
+}
+
+.page-head .page-title .row h1 {
+  font-family: 'Archivo Black', sans-serif;
+  color: #3d3d3d;
+  font-size: 50px;
+}
+
+.page-head .services-list {
+  padding: 5px 0;
+}
+
+.page-head .services-list .row {
+  width: 70%;
+  font-weight: 300;
+}
+
+.page-head .services-list .row .list-container {
+  width: 100%;
+  padding: 5px;
+}
+
+.page-head .services-list .row .list-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-head .services-list .row .list-container ul li {
+  width: 25%;
+  margin: 5px;
+  color: blue;
+  font-size: 20px;
+}
+
+.page-head .services-list .row .list-container ul li span {
+  color: black;
+}
+
+.page-head .services-list .row .text-container {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.page-head .services-list .row .text-container p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.content-wrap {
+  width: 100%;
+  height: auto;
+}
+
+.content-wrap .intro-top {
+  width: 100%;
+  height: auto;
+  padding: 80px 40px;
+}
+
+.content-wrap .intro-top .content-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap {
+  width: 40%;
+  height: 45vh;
+  background-color: black;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: 'Sen', sans-serif;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .box h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .box p {
+  font-size: 18px;
+  padding: 15px 40px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .left {
+  background-color: black;
+  color: #eae9e5;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .left h1,
+.content-wrap .intro-top .content-fluid .box-wrap .left p {
+  color: whitesmoke;
+}
+
+.content-wrap .intro-top .content-fluid .box-wrap .right {
+  background-color: #eae9e5;
+  -webkit-transform: translate(-50px, -50px);
+          transform: translate(-50px, -50px);
 }
 
 .contact-page {

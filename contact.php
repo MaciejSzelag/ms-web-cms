@@ -1,4 +1,4 @@
-<?php $tabTitle="Home page"; include "includes/head.php"; ?>
+<?php $tabTitle="Contact"; include "includes/head.php"; ?>
 
 <div class="contact-page">
 

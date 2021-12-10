@@ -1,0 +1,145 @@
+.page-head {
+    height: auto;
+    padding: 50px;
+
+    .page-title,
+    .services-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+
+    .page-title {
+
+        padding: 50px 0;
+
+        .row {
+            width: 70%;
+
+            h1 {
+                // width: 80%;
+                font-family: 'Archivo Black', sans-serif;
+                color: rgb(61, 61, 61);
+                // font-size: 3vw;
+                font-size: 50px;
+            }
+        }
+    }
+
+    .services-list {
+
+        padding: 5px 0;
+
+        .row {
+            width: 70%;
+            // font-family: 'Archivo Black', sans-serif;
+            font-weight: 300;
+
+            .list-container {
+                width: 100%;
+                padding: 5px;
+
+                ul {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    li {
+                        width: 25%;
+                        margin: 5px;
+                        color: blue;
+                        font-size: 20px;
+
+                        span {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .text-container {
+                width: 100%;
+                padding: 20px 10px;
+
+                p {
+                    font-size: 20px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+}
+
+.content-wrap {
+    width: 100%;
+    height: auto;
+
+    .intro-top {
+        width: 100%;
+        height: auto;
+        // background-color: rgb(209, 249, 250);
+        padding: 80px 40px;
+
+        .content-fluid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+
+            .box-wrap {
+                width: 40%;
+                height: 45vh;
+
+                background-color: rgb(0, 0, 0);
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    font-family: 'Sen', sans-serif;
+
+                    h1 {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        padding: 15px 40px;
+                        line-height: 35px;
+                        text-align: center;
+
+
+                    }
+
+                }
+
+                .left {
+                    background-color: black;
+                    color: rgb(234, 233, 229);
+
+                    // transform: translate(-50px, 50px);
+                    h1,
+                    p {
+                        color: whitesmoke;
+                    }
+                }
+
+                .right {
+                    background-color: rgb(234, 233, 229);
+                    transform: translate(-50px, -50px);
+
+                }
+            }
+        }
+    }
+
+}

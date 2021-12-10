@@ -140,7 +140,7 @@ nav .nav-wrap-top .date-wrap p {
 
 @media (max-width: 1024px) {
   nav {
-    left: -45%;
+    left: -50%;
     width: 50%;
     -webkit-transition: .5s linear;
     transition: .5s linear;
@@ -499,5 +499,195 @@ nav .nav-wrap-top .date-wrap p {
 .dash-head .dash-box a .icon-wrap i {
   font-size: 16px;
   color: #1d60a3;
+}
+
+.message-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.message-wrap .msg-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.message-wrap .message-header,
+.message-wrap .text-container {
+  width: 70%;
+}
+
+.message-wrap .message-header {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  background-color: #003a5c;
+  border-radius: 0 0 10px 10px;
+}
+
+.message-wrap .message-header h2 {
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.671);
+  font-size: 20px;
+  color: white;
+}
+
+.message-wrap .message-header h2 span {
+  font-weight: 100;
+}
+
+.message-wrap .message-header h2 span a {
+  color: white;
+  text-decoration: none;
+}
+
+.message-wrap .text-container {
+  margin-top: 50px;
+}
+
+.message-wrap .text-container .msg-title {
+  margin-bottom: 30px;
+}
+
+.message-wrap .text-container .text-wrap {
+  min-width: 100%;
+  min-height: 30vh;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.466);
+  border-radius: 10px;
+}
+
+.message-wrap .actions {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+}
+
+.message-wrap .actions button {
+  border-radius: 5px;
+  padding: 8px 16px;
+  border: 1px solid black;
+  margin: 20px;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.message-wrap .actions button a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.message-wrap .actions button:hover {
+  background-color: #353535;
+}
+
+.message-wrap .actions button:hover a {
+  color: whitesmoke;
+}
+
+.message-wrap .actions .call {
+  border: 1px solid #129900;
+}
+
+.message-wrap .actions .call a {
+  color: #129900;
+}
+
+.message-wrap .actions .call:hover {
+  background-color: #129900;
+}
+
+.message-wrap .actions .call:hover a {
+  color: whitesmoke;
+}
+
+.message-wrap .actions .delete {
+  border: 1px solid brown;
+}
+
+.message-wrap .actions .delete a {
+  color: brown;
+}
+
+.message-wrap .actions .delete:hover {
+  background-color: brown;
+}
+
+.message-wrap .actions .delete:hover a {
+  color: whitesmoke;
+}
+
+@media (max-width: 1024px) {
+  .message-wrap .message-header,
+  .message-wrap .text-container {
+    width: 90%;
+  }
+  .message-wrap .message-header h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .message-wrap .message-header {
+    width: 100%;
+    border-radius: 0;
+  }
+  .message-wrap .message-header h2 {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .message-wrap .text-container .text-wrap p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 280px) {
+  .message-wrap .message-header h2 {
+    padding: 3px;
+    font-size: 12px;
+  }
+  .message-wrap .text-container .text-wrap p {
+    font-size: 12px;
+  }
+  .message-wrap .actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .message-wrap .actions button {
+    margin: 5px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=adminStyle.css.map */
