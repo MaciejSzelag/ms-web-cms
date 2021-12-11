@@ -52,11 +52,11 @@
                     <!-- <td><a href="index.php?source=contact-form-table&update=<?php echo $msg_id;?>"><?php echo $msg_status; ?></a></td> -->
                     <td><a href="index.php?source=show-message&msg_id=<?php echo $msg_id;?>">Show message</a></td>
                     <td class="width-auto"><a href="index.php?source=contact-form-table&delete=<?php echo $msg_id;?>"><i class="fas fa-trash-alt"></i></a></td>
+                  
              
                 </tr>
-
-
-
+                
+             
 
 
 

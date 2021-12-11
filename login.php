@@ -3,6 +3,11 @@
 <div class="content">
     <div class="row">
         <div class="login-wrap">
+
+            <div class="bgc-lettering">
+                <h1>Login</h1>
+            </div>
+
             <form action="">
                 <h1>Login</h1>
                 <div class="input-group">

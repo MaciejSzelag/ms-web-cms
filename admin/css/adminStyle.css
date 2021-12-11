@@ -269,6 +269,10 @@ nav .nav-wrap-top .date-wrap p {
   text-decoration: none;
 }
 
+.container .table-wrap table .Read .msg-new {
+  display: none;
+}
+
 .container .table-wrap table .Read:hover,
 .container .table-wrap table .Unread:hover {
   background-color: rgba(70, 98, 190, 0.699);
@@ -581,6 +585,7 @@ nav .nav-wrap-top .date-wrap p {
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.466);
   border-radius: 10px;
+  background-color: white;
 }
 
 .message-wrap .actions {
@@ -623,12 +628,13 @@ nav .nav-wrap-top .date-wrap p {
   color: #129900;
 }
 
-.message-wrap .actions .call:hover {
-  background-color: #129900;
+.message-wrap .actions .call:hover a,
+.message-wrap .actions .delete:hover a {
+  color: white;
 }
 
-.message-wrap .actions .call:hover a {
-  color: whitesmoke;
+.message-wrap .actions .call:hover {
+  background-color: #129900;
 }
 
 .message-wrap .actions .delete {
@@ -641,10 +647,6 @@ nav .nav-wrap-top .date-wrap p {
 
 .message-wrap .actions .delete:hover {
   background-color: brown;
-}
-
-.message-wrap .actions .delete:hover a {
-  color: whitesmoke;
 }
 
 @media (max-width: 1024px) {

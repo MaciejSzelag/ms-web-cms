@@ -2,17 +2,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 100%;
     height: 100vh;
-    // background-image: linear-gradient(0deg, white 20%, $colorBlue);
 
+    // background-image: linear-gradient(0deg, white 20%, $colorBlue);
+    .bgc-lettering {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        h1 {
+            font-size: 30vw;
+            // transform: translateY(-30%);
+            color: rgba(201, 201, 201, 0.164);
+        }
+    }
 
     form {
         padding: 100px 200px;
         // border: 1px solid rgba(0, 0, 0, 0.185);
         box-shadow: 0 0 20px 1px rgb(179, 179, 179);
         border-radius: 10px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.863);
 
         h1 {
             color: $colorBlue;
