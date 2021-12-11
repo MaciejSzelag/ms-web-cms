@@ -131,8 +131,7 @@
                 </div>
                 <div class="row-box-wrap">
                     <div class="blue text">
-                        <span>I am waiting for questions.</span>
-                        <h1> Let's plan your a new project
+                        <h1> Let’s get your project up and running!
                             <i class="far fa-grin-wink"></i>
                         </h1>
                     </div>
