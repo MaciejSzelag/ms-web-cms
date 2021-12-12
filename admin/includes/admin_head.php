@@ -1,6 +1,20 @@
 <?php include "../includes/db.php"; ?>
 <?php include "functions.php"; ?>
 <?php ob_start();?>
+<?php session_start(); ?>
+<?php
+
+if($_SESSION['ms_user_role'] !== "ms_admin"){
+    header('location: ../index.php');
+}
+
+if(!isset($_SESSION['ms_user_role'])){
+  
+    header('location: ../index.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +40,7 @@
            
             <li><a href="index.php?source=admin-categories">Categories </a></li>
             <li><a href="index.php?source=table-visits-by-ip">Vists by IP</a></li>
+            <li><a href="../includes/logout.php">Logout</a></li>
             
         </ul>
     </div>

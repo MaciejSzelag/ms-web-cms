@@ -8,14 +8,15 @@
                 <h1>Login</h1>
             </div>
 
-            <form action="">
+            <form action="includes/auth.php" method="post">
                 <h1>Login</h1>
+         
                 <div class="input-group">
                     <div class="label-wrap">
                         <label for="">Email</label>
                     </div>
                     <div class="input-wrap">
-                        <input type="text" name="email" placeholder="email" required>
+                        <input type="text" name="email" placeholder="email" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="input-group">
@@ -23,14 +24,15 @@
                         <label for="">Password</label>
                     </div>
                     <div class="input-wrap">
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrap">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Login" name="login">
                     </div>
                 </div>
+                <a href="register.php">Register</a>
             </form>
         </div>
     </div>

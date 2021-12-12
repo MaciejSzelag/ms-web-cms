@@ -90,4 +90,12 @@ function getUserIP() {
 }
 
 
+function alertMessage($message, $className){
+
+    echo "<div class='$className'> 
+          $message  
+          </div>";
+
+}
+
 ?>

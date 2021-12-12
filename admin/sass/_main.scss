@@ -15,6 +15,7 @@ nav {
     width: $navWidth;
     height: 100vh;
     background-color: $darkGrey;
+    z-index: 100;
 
     .nav-wrap {
         width: 100%;

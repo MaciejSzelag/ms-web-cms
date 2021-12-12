@@ -44,3 +44,51 @@
         }
     }
 }
+
+@media(max-width:600px) {
+
+    .dash-head {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 100px 0;
+
+        .dash-box {
+
+            width: 50vw;
+            height: 25vw;
+            margin: 30px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            a {
+
+                font-size: 23px;
+
+                .icon-wrap {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-color: whitesmoke;
+                    border-radius: 10px 10px 0 0;
+
+                    i {
+                        font-size: 16px;
+                        color: $colorBlue;
+                    }
+                }
+            }
+        }
+    }
+
+}
