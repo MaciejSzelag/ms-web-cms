@@ -1,7 +1,7 @@
 <header>
 <?php numberOfVisits(); 
 getUserIP(); ?>
-    <div class="header-wrap">
+    <div class="header-wrap" id="client-box">
         <div class="header-part">
             <div class="text-title-wrap">
                 <h3>Modern websites</h3>
@@ -16,7 +16,7 @@ getUserIP(); ?>
             </div>
         </div>
         <div class="header-part">
-            <div class="img-container">
+            <div class="img-container"  >
                 <!-- <img src="images/laptop-startup.png" alt=""> -->
                 <img src="images/logo_1280.png" alt="">
             </div>

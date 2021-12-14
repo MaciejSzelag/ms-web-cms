@@ -1,21 +1,23 @@
 const img_container = document.querySelector(".img-container");
 const img = document.querySelector(".img-container img");
 
-document.body.addEventListener("mousemove", (e) => {
-    
- 
-        
-        const x = e.clientX;
+
+document.body.addEventListener("mousemove", (e) => {    
+    const x = e.clientX;
     const y = e.clientY;
     const width = ((window.innerWidth / 2) - x) / 2
     const height = ((window.innerHeight / 2) - y) / 2;
     
     if (window.innerWidth > 1024) {
 
-  
-        img.style.setProperty("transform", `rotateX(${(-height / 20)}deg) rotateY(${(width / 20)}deg) translate(${width / 10}px, ${height / 10}px)`)
+        if (img_container !== null) {
+      
+            img.style.setProperty("transform", `rotateX(${(-height / 20)}deg) rotateY(${(width / 20)}deg) translate(${width / 10}px, ${height / 10}px)`)
  
-        img.style.setProperty("filter", `drop-shadow(${-width / 10}px ${-height / 10}px 20px rgba(29, 96, 163, .6))`)
+            img.style.setProperty("filter", `drop-shadow(${-width / 10}px ${-height / 10}px 20px rgba(29, 96, 163, .6))`)
+
+  }
+       
     }
    
 })

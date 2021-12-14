@@ -45,9 +45,15 @@ if(!isset($_SESSION['ms_user_role'])){
         </ul>
     </div>
     <div class="nav-wrap-top">
-         <div class="date-wrap">
-             <p><?php echo date('d M Y')?></p>
-         </div>
+         <!-- <div class="date-wrap"> -->
+         <div class="d-left"><i class="fas fa-bars"></i></div>
+            <div class="d-right">   <?php if(isset($_SESSION['ms_user_name'])) echo "<p>Hello ".$_SESSION['ms_user_name']." </p>";?></p>
+             <p><?php echo "Today is ".date('d M Y')?></p></div>
+
+
+       
+
+         <!-- </div> -->
     </div>
 
 </nav>

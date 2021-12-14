@@ -90,9 +90,9 @@ nav .nav-wrap-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -108,7 +108,8 @@ nav .nav-wrap-top h1 {
   color: white;
 }
 
-nav .nav-wrap-top .date-wrap {
+nav .nav-wrap-top .d-right,
+nav .nav-wrap-top .d-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,8 +123,17 @@ nav .nav-wrap-top .date-wrap {
   padding: 0 30px;
 }
 
-nav .nav-wrap-top .date-wrap p {
+nav .nav-wrap-top .d-right i,
+nav .nav-wrap-top .d-right p,
+nav .nav-wrap-top .d-left i,
+nav .nav-wrap-top .d-left p {
   color: white;
+  margin-right: 5px;
+}
+
+nav .nav-wrap-top .d-right i,
+nav .nav-wrap-top .d-left i {
+  font-size: 20px;
 }
 
 .admin-wrap {
@@ -198,7 +208,7 @@ nav .nav-wrap-top .date-wrap p {
   font-family: arial, sans-serif;
   width: 100%;
   padding: 5px;
-  background-color: #b9c9fe;
+  background-color: #496679;
 }
 
 .container .table-wrap .table .tbody {
@@ -232,19 +242,15 @@ nav .nav-wrap-top .date-wrap p {
   width: 90%;
   padding: 10px 0;
   background-color: #e8edff;
-  border-radius: 15px;
+  border-radius: 5px;
   text-decoration: none;
   color: black;
-  -webkit-transition: .1s linear;
-  transition: .1s linear;
 }
 
 .container .table-wrap .table .tbody .tr a .td {
   text-align: center;
   min-width: 150px;
   font-size: 15px;
-  -webkit-transition: .1s linear;
-  transition: .1s linear;
 }
 
 .container .table-wrap .table .tbody .tr a .td-id {
@@ -257,6 +263,7 @@ nav .nav-wrap-top .date-wrap p {
 }
 
 .container .table-wrap .table .tbody .tr .thd4 {
+  visibility: hidden;
   width: 60px;
 }
 
@@ -285,16 +292,13 @@ nav .nav-wrap-top .date-wrap p {
 }
 
 .container .table-wrap .table .tbody .Unread a {
-  background-color: #4662be;
+  background-color: #003a5c;
 }
 
 .container .table-wrap .table .tbody .Unread a .td {
   font-weight: 700;
-  color: white;
-}
-
-.container .table-wrap .table .tbody .Unread a .td a {
-  color: white;
+  color: whitesmoke;
+  background-color: #003a5c;
 }
 
 .container .table-wrap .table .tbody .Read a {
@@ -319,6 +323,11 @@ nav .nav-wrap-top .date-wrap p {
 .container .table-wrap .table .tbody .Read:hover a .td a,
 .container .table-wrap .table .tbody .Unread:hover a .td a {
   color: whitesmoke;
+}
+
+.container .table-wrap .table .tbody .Read:hover .thd4,
+.container .table-wrap .table .tbody .Unread:hover .thd4 {
+  visibility: visible;
 }
 
 .container .table-wrap .table .tbody .Read:hover .thd4 a,

@@ -20,7 +20,15 @@
                 $select_ips = mysqli_query($connection,$query);
                                     if(!$select_ips){
                                             die(mysqli_error($connection));
-                                    }
+                                      
+                                        }
+                for($x=1; $x<=mysqli_num_rows($select_ips); ) {
+                                               
+                                         
+                                            
+                                     
+                                         
+                                               
 
                     while($ips_row = mysqli_fetch_assoc( $select_ips)){
                         $id_ip = $ips_row['id_ip'];
@@ -31,6 +39,7 @@
                 ?>
 
             <tr>
+                    <td><?php  echo $x++; ?></td>
                     <td><?php echo $IP_address;?></td>
                     <td><?php echo $number_of_visits;  ?></td>
                     <td><?php echo $last_visit;  ?></td>
@@ -40,15 +49,20 @@
                
           
              
+        
+
+
                 </tr>
+          
                 <?php 
                         deletePosition($id_ip, 'ip_adresses','id_ip', 'index.php?source=table-visits-by-ip');
 
                      
                 ?>
                 <?php } ?>
-          
-
+                <?php } ?>
+            
+           
             
             </tbody>
         </table>

@@ -252,7 +252,7 @@ html {
     width: 100%;
   }
   .content .row .row-box-wrap .rbw-box .img-box-wrap img {
-    width: 40%;
+    width: 60%;
   }
   .content .row .row-box-wrap .rbw-box .text-box-wrap .tbw-title h2 {
     width: auto;
@@ -264,6 +264,7 @@ html {
   .content .row .row-box-wrap .rbw-box .text-box-wrap .tbw-content p {
     width: auto;
     font-size: 4vw;
+    line-height: 25px;
   }
   .content .row .row-box-wrap .rbw-box .text-box-wrap .tbw-content .p-bigger {
     -webkit-transform: scale(1);
@@ -1919,6 +1920,58 @@ header .header-wrap .header-part .img-container .img-2 {
   border-radius: 5px;
   background-color: #1d60a3;
   color: white;
+}
+
+.blog-header {
+  width: 100%;
+  height: 50vh;
+  background-image: url(../images/forest-deer-vector.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.blog-header .header-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 98, 179, 0.671);
+}
+
+.blog-header .header-wrap .page-title {
+  width: 100%;
+  height: auto;
+}
+
+.blog-header .header-wrap .page-title h1 {
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-size: 5vw;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.main-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-blog .main-wrap {
+  width: 50%;
+  height: auto;
+  background-color: white;
+  -webkit-transform: translateY(-10vh);
+          transform: translateY(-10vh);
 }
 
 footer {
