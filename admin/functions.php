@@ -1,11 +1,22 @@
 <?php 
+
+//Function to confirm query
 function confirmQuery($mysqliQuery){
     global $connection;
     if(!$mysqliQuery){
         die("Query faild". mysqli_error($connection));
     }
 }
+//Function for connection and query
+function select_query($query){
+    global $connection;
+    $select_query =  mysqli_query($connection, $query);
+    confirmQuery($select_query);
+    return $select_query;
+}
 
+#Function to delete position
+#deletePosition(get deleting id, table's name, column id, header-locaation)
 function deletePosition($get_id_name, $table_name, $table_column_id,   $header_location){
     global $connection;
     if(isset($_GET['delete'])){
@@ -16,7 +27,7 @@ function deletePosition($get_id_name, $table_name, $table_column_id,   $header_l
         header("Location: $header_location");
     }
 }
-
+//Function to counting visits on the main index
 function numberOfVisits(){
     global $connection;
     $query = "SELECT * FROM quests_on_website WHERE q_number";
@@ -59,8 +70,9 @@ function getUserIP() {
     if($ip == "::1"){
         $ip = "My computer";
     }
-//temporary
 
+
+//Function to count visits by IP
    if($ip){
         $query = "SELECT * FROM ip_adresses WHERE IP_address = '$ip' ";
         $check_if_exist = mysqli_query($connection,$query);
@@ -89,7 +101,7 @@ function getUserIP() {
     }
 }
 
-
+//Function for alerts
 function alertMessage($message, $className){
 
     echo "<div class='$className'> 
@@ -97,5 +109,13 @@ function alertMessage($message, $className){
           </div>";
 
 }
+
+
+
+function orderByDescending($tableName, $column){
+    $query = "SELECT * FROM $tableName ORDER BY $column DESC";
+    return $query;
+}
+
 
 ?>

@@ -43,29 +43,11 @@
             <?php
 
             if(isset($_POST['submit'])){
-
-                $category_name = $_POST['category_name'];
-                $visitor_name = $_POST['visitor_name'];
-                $visitor_phone_number = $_POST['visitor_phone_number'];
-                $visitor_email = $_POST['visitor_email'];
-                $visitor_message = $_POST['visitor_message'];
-                $status = 'Unread';
-
-                $category_name = mysqli_real_escape_string($connection,$category_name);
-                $visitor_name = mysqli_real_escape_string($connection,$visitor_name );
-                $visitor_phone_number = mysqli_real_escape_string($connection,$visitor_phone_number);
-                $visitor_email =mysqli_real_escape_string($connection,$visitor_email);
-                $visitor_message = mysqli_real_escape_string($connection,$visitor_message);
-                $query = "INSERT INTO msweb_contact_form(category_name,visitor_name,visitor_phone_no,visitor_email,visitor_message,visitor_message_date, msg_status) VALUES('$category_name','$visitor_name','$visitor_phone_number', '$visitor_email', '$visitor_message', now() ,'$status')";
-                $insert_visitor_message_query = mysqli_query($connection,$query);
-
-                if(!$insert_visitor_message_query){
-                    die(mysqli_error($connection));
-                }
-
-
-
-            }
+                $contactForm = new ContactTable();
+                $contactForm->get_posts_names();
+                $insert_msg = new ContactTable();
+               $insert_msg->insertToContactForm();
+             }
 
 
             ?>

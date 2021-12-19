@@ -1,19 +1,15 @@
 <?php include "../includes/db.php"; ?>
 <?php include "functions.php"; ?>
+<?php include "contactform/classes.php"; ?>
 <?php ob_start();?>
 <?php session_start(); ?>
 <?php
-
-if($_SESSION['ms_user_role'] !== "ms_admin"){
-    header('location: ../index.php');
+    if($_SESSION['ms_user_role'] !== "ms_admin"){
+        header('location: ../index.php');
+    }
+    if(!isset($_SESSION['ms_user_role'])){
+        header('location: ../index.php');
 }
-
-if(!isset($_SESSION['ms_user_role'])){
-  
-    header('location: ../index.php');
-
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

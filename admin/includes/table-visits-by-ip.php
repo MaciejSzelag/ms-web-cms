@@ -23,13 +23,7 @@
                                       
                                         }
                 for($x=1; $x<=mysqli_num_rows($select_ips); ) {
-                                               
-                                         
-                                            
-                                     
-                                         
-                                               
-
+         
                     while($ips_row = mysqli_fetch_assoc( $select_ips)){
                         $id_ip = $ips_row['id_ip'];
                         $IP_address = $ips_row['IP_address'];
@@ -66,6 +60,7 @@
             
             </tbody>
         </table>
+
     </div>
     
 

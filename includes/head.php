@@ -1,5 +1,6 @@
 <?php include "includes/db.php";?>
 <?php include "admin/functions.php"; ?>
+<?php include "classes.php"; ?>
 <?php session_start(); ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,7 @@
         <link rel="stylesheet" href="css/style.min.css">
         <link rel="stylesheet" href="css/style.min.css">
         <link rel="stylesheet" href="css/all.min.css">
+      
 
     </head>
 

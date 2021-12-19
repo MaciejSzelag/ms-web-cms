@@ -1,5 +1,16 @@
-<?php $tabTitle = "Admin"; include "includes/admin_head.php";?>
 
+<?php $tabTitle = "Admin"; include "includes/admin_head.php";?>
+<?php
+
+    $table = new SelectTable();//Select from table
+    $fetch_assoc = new ContactFormAllRows();// mysqli_fetch_assoc
+    $msg_rows = new ContactFormAllRows();//messages rows
+    $table->SelectFrom();//select * From all rows
+    // $query = $table->selectQuery;
+   
+
+
+?>
 <div class="admin-wrap">
     <div class="row">
 

@@ -2020,8 +2020,8 @@ header .header-wrap .header-part .img-container .img-2 {
   padding: 30px;
   margin-bottom: 50px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px 5px rgba(77, 77, 77, 0.185);
-          box-shadow: 0 0 10px 5px rgba(77, 77, 77, 0.185);
+  -webkit-box-shadow: 0 0 20px 5px #cecece;
+          box-shadow: 0 0 20px 5px #cecece;
 }
 
 .main-blog .main-wrap a .blog-box .box-img {

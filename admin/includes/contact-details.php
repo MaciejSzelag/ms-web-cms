@@ -4,17 +4,12 @@
         <div class="form-wrap">
         <?php 
             if(isset($_POST['submit'])){
-                    $type_of_contact = $_POST['type_of_contact'];
-                    $contact_details = $_POST['contact_details'];
-                    // echo $type_of_contact ." - " .$contact_details;
-                    $type_of_contact = mysqli_real_escape_string($connection, $type_of_contact);
-                    $contact_details = mysqli_real_escape_string($connection, $contact_details);
-                    
-                    $query = "INSERT INTO my_contact_deteils(type_of_contact, contact_details) VALUES  ('$type_of_contact','$contact_details')";
-                    $insert_datails_contact_query= mysqli_query($connection, $query);
-                        if(!$insert_datails_contact_query){
-                            die(mysqli_error($connection));
-                        }
+                $contact = new AllTables();
+                $contact->postContact();
+                $insert_contact_query = new Insert();
+                $insert_contact_query->contactDatails($contact->type_of_contact,$contact->contact_details);
+            
+
             }
         ?>
             <form action="" method="post">
