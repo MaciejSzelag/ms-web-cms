@@ -4,29 +4,44 @@
         <div class="form-wrap">
         <?php 
             if(isset($_POST['submit'])){
-                $contact = new AllTables();
+                $contact = new ContactDetails();
                 $contact->postContact();
                 $insert_contact_query = new Insert();
-                $insert_contact_query->contactDatails($contact->type_of_contact,$contact->contact_details);
-            
+                $contact->contact_details = ltrim($contact->contact_details); //  Removes whitespace or other predefined characters from the left side of a string
 
+               if($contact->type_of_contact != "" && $contact->contact_details != ""){
+                    $insert_contact_query->contactDatails($contact->type_of_contact, $contact->contact_details);
+                    $contact->type_of_contact = null;
+                    $contact->contact_details = null;                                          
+                   
+                }else if($contact->type_of_contact === null && $contact->contact_details === null || $contact->contact_details == ""){
+                    $msg = "You have to select option";
+                    $msg_details = "You have to add contact";                                                
+                      
+                }else if($contact->type_of_contact === null  || $contact->type_of_contact == ""){
+                    $msg = "You have to select option";               
+                } else  if (empty($contact->contact_details) || $contact->contact_details === null || $contact->contact_details == ""){
+                    $msg_details = "You have to add contact";                          
+                }
             }
         ?>
             <form action="" method="post">
                 <h3>Add contact</h3>
                 <div class="form-group">
-                    <label for="">Type of contact</label>
+                    <label for="">Type of contact    <?php if(!empty($msg)) echo '<span class="span-alert"> - '.  $msg . '</span>'; ?></label>
                    <select name="type_of_contact" >
-                       <option value="Email">Email</option>
-                       <option value="Phone">Phone number</option>
-                       <option value="Facebook">Facebook</option>
-                       <option value="Twitter">Twitter</option>
-                       <option value="Instagram">Instagram</option>
+                    <?php  if(!empty($contact->type_of_contact)) echo "<option value='$contact->type_of_contact'>".$contact->type_of_contact."</option>";?>
+                        <option value="">Select option</option>
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone number</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Contact detail</label>
-                    <input type="text" name="contact_details" placeholder="Contact detail">
+                    <label for="">Contact detail <?php if(!empty($msg_details)) echo '<span class="span-alert"> - '.  $msg_details . '</span>'; ?></label>
+                    <input type="text" name="contact_details" placeholder="Contact detail" value="<?php  if(!empty($contact->contact_details)) echo $contact->contact_details;?>" >
                 </div>
                 <div class="form-group">
                     <input type="submit" name="submit" value="Add contact">
@@ -37,12 +52,15 @@
 <?php 
     if(isset($_GET['edit'])){
         $contact_id = $_GET['edit'];
-        $query = "SELECT * FROM my_contact_deteils WHERE id = $contact_id";
-        $select_contact_details_query = mysqli_query($connection, $query);
-        $row_edit = mysqli_fetch_assoc($select_contact_details_query);
-        $detail_id =$row_edit['id'];
-        $type_of_contact = $row_edit['type_of_contact'];
-        $contact_details = $row_edit['contact_details'];
+        $contactTable = new ContactDetails();
+        $query = selectWhere('my_contact_deteils','id',$contact_id );// Function
+        $select_contact_details_query = select_query($query);//function
+        $row_edit = $contactTable->fetch_assoc($select_contact_details_query);
+        $contactTable->contact_get_rows($row_edit);
+        $detail_id = $contactTable->id;
+        $type_of_contact = $contactTable->type_of_contact;
+        $contact_details = $contactTable->contact_details;
+      
 ?>
             <form action="" method="post">
                 <h3>Edit contact</h3>
@@ -67,10 +85,12 @@
             </form>
             <?php
                 if(isset($_POST['update'])){
-                    $type_of_contact = $_POST['type_of_contact'];
-                    $contact_details = $_POST['contact_details'];
-                    $type_of_contact = mysqli_real_escape_string($connection, $type_of_contact);
-                    $contact_details = mysqli_real_escape_string($connection, $contact_details);
+
+                    $post = new ContactDetails();
+                    $post->postContact();
+                    $type_of_contact = $post->type_of_contact;
+                    $contact_details = $post->contact_details;
+                
                     $query = "UPDATE my_contact_deteils SET type_of_contact = '$type_of_contact', contact_details = '$contact_details' WHERE id = $contact_id";
                     $update_query = mysqli_query($connection, $query);
                     if(!$update_query){

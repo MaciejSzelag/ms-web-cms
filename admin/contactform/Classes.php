@@ -1,13 +1,25 @@
 <?php 
 
-class AllTables {
+class ContactDetails {
 //contact details
-  public $type_of_contact;
-  public $contact_details;
+    public $id;
+    public $type_of_contact;
+    public $contact_details;
+     // mysqli_fetch_assoc
+    function fetch_assoc($select_query){
+        $fetch_assoc = mysqli_fetch_assoc($select_query);
+        return $fetch_assoc;
+
+    }
 function postContact(){
     global $connection;
     $this->type_of_contact =  mysqli_real_escape_string($connection, $_POST['type_of_contact']);
     $this->contact_details = mysqli_real_escape_string($connection, $_POST['contact_details']);
+}
+function contact_get_rows($row){
+    $this->id = $row['id'];
+    $this->type_of_contact = $row['type_of_contact'];
+    $this->contact_details = $row['contact_details'];
 }
 
 }
@@ -85,13 +97,10 @@ class SelectTable{
 
 }
 class Insert{
-    public $tableName;
-
-
+   
         function contactDatails($type_of_contact,$contact_details){
             $query = "INSERT INTO my_contact_deteils(type_of_contact, contact_details) VALUES  ('$type_of_contact','$contact_details')";
             select_query($query);
         }
-
 }
 ?>

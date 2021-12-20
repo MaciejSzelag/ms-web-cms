@@ -14,6 +14,17 @@ function select_query($query){
     confirmQuery($select_query);
     return $select_query;
 }
+#Select Order by DESC
+function orderByDescending($tableName, $column){
+    $query = "SELECT * FROM $tableName ORDER BY $column DESC";
+    return $query;
+}
+#Select Order by DESC
+function selectWhere($tableName, $id_name,$id_GET){
+    $query = "SELECT * FROM $tableName WHERE $id_name = $id_GET";
+    return $query;
+}
+
 
 #Function to delete position
 #deletePosition(get deleting id, table's name, column id, header-locaation)
@@ -112,10 +123,6 @@ function alertMessage($message, $className){
 
 
 
-function orderByDescending($tableName, $column){
-    $query = "SELECT * FROM $tableName ORDER BY $column DESC";
-    return $query;
-}
 
 
 ?>

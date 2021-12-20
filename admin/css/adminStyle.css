@@ -412,6 +412,11 @@ nav .nav-wrap-top .d-left i {
   width: 100%;
 }
 
+.container .table-wrap .form-wrap form .form-group label .span-alert {
+  font-size: 16px;
+  color: red;
+}
+
 .container .table-wrap .form-wrap form .form-group select,
 .container .table-wrap .form-wrap form .form-group input {
   width: 100%;
