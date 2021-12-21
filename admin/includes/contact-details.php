@@ -93,9 +93,7 @@
                 
                     $query = "UPDATE my_contact_deteils SET type_of_contact = '$type_of_contact', contact_details = '$contact_details' WHERE id = $contact_id";
                     $update_query = mysqli_query($connection, $query);
-                    if(!$update_query){
-                        die(mysqli_error($connection));
-                    }
+                    confirmQuery($update_query);
                     $type_of_contact = "";
                     $contact_details = "";
                 }

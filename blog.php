@@ -22,7 +22,7 @@
                             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid praesentium eaque laudantium saepe quo nulla, odio dolores tenetur doloremque in hic nostrum et porro veniam illo vitae. Nesciunt, hic?</p> -->
 
                            <p> <?php echo substr("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid praesentium eaque laudantium saepe quo nulla, odio dolores tenetur doloremque in hic nostrum et porro veniam illo vitae. Nesciunt, hic?", 0,150);?>...</p>
-                            <span>Published: 12/12/2021</span>
+                            <span>Published: 12/12/2021 by Maciej Szelag</span>
                         </div>
 
 
