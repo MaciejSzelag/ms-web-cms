@@ -16,7 +16,7 @@
                         <label for="">Email</label>
                     </div>
                     <div class="input-wrap">
-                        <input type="text" name="email" placeholder="email" autocomplete="off" required>
+                        <input type="text" name="email" placeholder="email" autocomplete="on" required>
                     </div>
                 </div>
                 <div class="input-group">

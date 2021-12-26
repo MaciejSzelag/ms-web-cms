@@ -1,4 +1,3 @@
-
 <?php $tabTitle = "Admin"; include "includes/admin_head.php";?>
 <?php
 
@@ -15,9 +14,9 @@
     <div class="row">
 
         <?php 
+  
             if(isset($_GET['source'])){
                 $source = $_GET['source'];
-
 
             }else{
               $source = "";
@@ -37,7 +36,17 @@
                 include "includes/table-visits-by-ip.php";
                 break;
                 case "show-message";
-                include "includes/show-message.php";
+                
+                include  "includes/show-message.php";
+                break;
+                case "all_posts";
+                include "includes/all_posts.php";
+                break;
+                case "add_post";
+                include "includes/add_post.php";
+                break;
+                case "add_category";
+                include "includes/add_category.php";
                 break;
                 default: 
                 include "includes/admin_dashboard.php";

@@ -4,7 +4,7 @@
 function confirmQuery($mysqliQuery){
     global $connection;
     if(!$mysqliQuery){
-        die("Query faild". mysqli_error($connection));
+        die("Query faild - ". mysqli_error($connection));
     }
 }
 //Function for connection and query
@@ -22,6 +22,12 @@ function orderByDescending($tableName, $column){
 #Select Order by DESC
 function selectWhere($tableName, $id_name,$id_GET){
     $query = "SELECT * FROM $tableName WHERE $id_name = $id_GET";
+    return $query;
+}
+function postSelectAll($table_name){
+
+    $query = "SELECT * FROM $table_name";
+    select_query($query);
     return $query;
 }
 

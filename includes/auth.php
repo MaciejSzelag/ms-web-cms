@@ -51,6 +51,7 @@ if(isset($_POST['login'])){
 
         header("location: ../");  
     }else{
+    
         header("location: ../login.php"); 
       
     }

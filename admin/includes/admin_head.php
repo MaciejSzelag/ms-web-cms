@@ -20,7 +20,8 @@
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
         <link rel="stylesheet" href="../css/all.min.css">
         <link rel="stylesheet" href="css/adminStyle.css">
-    <title>Admin</title>
+    <title><?php global $tabTitle; echo $tabTitle;?></title>
+    <link rel="stylesheet" href="css/summernote-lite.css">
 </head>
 <body>
 <nav>
@@ -36,6 +37,13 @@
            
             <li><a href="index.php?source=admin-categories">Categories </a></li>
             <li><a href="index.php?source=table-visits-by-ip">Vists by IP</a></li>
+            <li class="dropdown">Posts 
+                <ul class="dropdown-list">
+                    <li><a href="index.php?source=all_posts">All posts</a></li>
+                    <li><a href="index.php?source=add_post">Add post</a></li>
+                    <li><a href="index.php?source=add_category">Add Category</a></li>
+                </ul>
+            </li>
             <li><a href="../includes/logout.php">Logout</a></li>
             
         </ul>

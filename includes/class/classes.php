@@ -1,4 +1,7 @@
 <?php 
+// include "admin/contactform/Classes.php";
+?>
+<?php 
 class ContactTable {
     //contact form
     public $category_name;
@@ -22,6 +25,44 @@ class ContactTable {
             select_query($query);
         }
     
+}
+
+class Posts{
+    public $query;
+    public $id;
+    public $title;
+    public $author;
+    public $content;
+    public $image;
+    public $status;
+    public $published;
+    public $updated;
+    public $category;
+
+
+        function all_rows($row){
+            
+            $this->id = $row['post_id'];
+            $this->title = $row['post_title'];
+            $this->author = $row['post_author'];
+            $this->content = $row['post_content'];
+            $this->image = $row['post_image'];
+            $this->status = $row['post_status'];
+            $this->published = $row['post_date_published'];
+            $this->updated = $row['post_date_updated'];
+            $this->category = $row['post_category'];
+        }
+
+      
+        //Query
+
+          function select_all($table_name){
+            global $connection;
+            $this->query = "SELECT * FROM $table_name";
+            $select_all = mysqli_query($connection, $this->query);
+            return $select_all;
+        }
+
 }
 
 ?>

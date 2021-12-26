@@ -1575,6 +1575,7 @@ header .header-wrap .header-part .img-container .img-2 {
 }
 
 .contact-page .contact-wrap .text-form {
+  min-width: 60%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1592,6 +1593,7 @@ header .header-wrap .header-part .img-container .img-2 {
 
 .contact-page .contact-wrap .text-form .box-contact-form {
   padding-left: 50px;
+  width: 70%;
 }
 
 .contact-page .contact-wrap .text-form .box-contact-form form {
@@ -1614,8 +1616,7 @@ header .header-wrap .header-part .img-container .img-2 {
   padding: 50px 100px;
   color: white;
   font-weight: 100;
-  border-bottom-left-radius: 20%;
-  border-top-right-radius: 10%;
+  border-radius: 10px;
 }
 
 .contact-page .contact-wrap .text-form .box-contact-form form h1 {
@@ -1678,10 +1679,12 @@ header .header-wrap .header-part .img-container .img-2 {
 }
 
 .contact-page .contact-wrap .text-form .box-contact-form form .input-group .input-wrap input[type=submit] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
   background-color: white;
   color: #1d60a3;
-  width: 50%;
-  border-radius: 10px;
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
@@ -2039,6 +2042,7 @@ header .header-wrap .header-part .img-container .img-2 {
   border: 1px solid rgba(0, 0, 0, 0.26);
   padding: 20px 10px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .main-blog .main-wrap a .blog-box .box-img .img-wrap {
@@ -2053,7 +2057,6 @@ header .header-wrap .header-part .img-container .img-2 {
           align-items: center;
   max-width: 900px;
   max-height: 300px;
-  overflow: hidden;
 }
 
 .main-blog .main-wrap a .blog-box .box-img .img-wrap img {
@@ -2235,6 +2238,12 @@ header .header-wrap .header-part .img-container .img-2 {
 
 .post-wrap .post-content .post-text p {
   line-height: 35px;
+}
+
+.post-wrap .post-content .s-p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #b4b4b4;
 }
 
 footer {

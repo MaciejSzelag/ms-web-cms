@@ -19,6 +19,7 @@
         .table,
         .form-wrap {
             margin: 30px;
+            empty-cells: hide;
         }
 
         .table {
@@ -180,6 +181,7 @@
             padding: 5px;
             border-radius: 10px;
             background-color: rgb(185, 201, 254);
+            empty-cells: hide;
 
 
 
@@ -266,6 +268,10 @@
                 }
 
                 .form-group {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
                     padding: 3px;
                     width: 100%;
 
@@ -278,7 +284,8 @@
                     }
 
                     select,
-                    input {
+                    input,
+                    textarea {
                         width: 100%;
                         padding: 5px;
                         margin-top: 5px;
@@ -288,7 +295,8 @@
 
 
                     input[type=submit] {
-                        width: 40%;
+                        align-self: center;
+                        width: auto;
                         padding: 6px 10px;
                         border: none;
                         border-radius: 5px;

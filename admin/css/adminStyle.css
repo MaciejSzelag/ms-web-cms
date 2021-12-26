@@ -52,14 +52,13 @@ nav .nav-wrap h1 {
 
 nav .nav-wrap ul {
   width: 100%;
-  height: auto;
+  height: 100%;
   padding-left: 20px;
 }
 
 nav .nav-wrap ul li {
   list-style: none;
   color: rgba(255, 255, 255, 0.7);
-  border-left: 2px solid white;
   -webkit-transition: .3s linear;
   transition: .3s linear;
   margin-bottom: 5px;
@@ -75,7 +74,7 @@ nav .nav-wrap ul li a {
   padding-left: 20px;
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
-  border-left: 2px solid #1d60a3;
+  border-left: 2px solid white;
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
@@ -84,6 +83,47 @@ nav .nav-wrap ul li a:hover {
   border-left: 5px solid #1d60a3;
   padding-left: 30px;
   color: white;
+  background-color: #444444;
+}
+
+nav .nav-wrap ul li:hover {
+  background-color: #444444;
+}
+
+nav .nav-wrap ul .dropdown {
+  position: relative;
+  width: 100%;
+  height: auto;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+  padding: 10px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  border-left: 2px solid white;
+}
+
+nav .nav-wrap ul .dropdown .dropdown-list {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -100%;
+  width: 100%;
+  opacity: 0;
+  padding-left: 0;
+  background-color: #2c2c2c;
+  z-index: -1;
+}
+
+nav .nav-wrap ul .dropdown:hover .dropdown-list {
+  height: auto;
+  padding: 10px;
+  opacity: 1;
+  z-index: 1;
+}
+
+nav .nav-wrap ul .dropdown:hover .dropdown-list li {
+  background-color: #444444;
 }
 
 nav .nav-wrap-top {
@@ -202,6 +242,7 @@ nav .nav-wrap-top .d-left i {
 .container .table-wrap .table,
 .container .table-wrap .form-wrap {
   margin: 30px;
+  empty-cells: hide;
 }
 
 .container .table-wrap .table {
@@ -341,6 +382,7 @@ nav .nav-wrap-top .d-left i {
   padding: 5px;
   border-radius: 10px;
   background-color: #b9c9fe;
+  empty-cells: hide;
 }
 
 .container .table-wrap table thead tr {
@@ -408,6 +450,19 @@ nav .nav-wrap-top .d-left i {
 }
 
 .container .table-wrap .form-wrap form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 3px;
   width: 100%;
 }
@@ -418,7 +473,8 @@ nav .nav-wrap-top .d-left i {
 }
 
 .container .table-wrap .form-wrap form .form-group select,
-.container .table-wrap .form-wrap form .form-group input {
+.container .table-wrap .form-wrap form .form-group input,
+.container .table-wrap .form-wrap form .form-group textarea {
   width: 100%;
   padding: 5px;
   margin-top: 5px;
@@ -426,7 +482,10 @@ nav .nav-wrap-top .d-left i {
 }
 
 .container .table-wrap .form-wrap form .form-group input[type=submit] {
-  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: auto;
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
@@ -787,6 +846,70 @@ nav .nav-wrap-top .d-left i {
   .message-wrap .actions button {
     margin: 5px;
     font-size: 10px;
+  }
+}
+
+.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  height: 50px;
+  padding: 40px 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  -webkit-animation: hideAlert 3s linear 1 both;
+          animation: hideAlert 3s linear 1 both;
+}
+
+.success {
+  color: green;
+  background-color: rgba(0, 190, 0, 0.3);
+}
+
+@-webkit-keyframes hideAlert {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideAlert {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=adminStyle.css.map */

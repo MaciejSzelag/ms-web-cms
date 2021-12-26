@@ -80,6 +80,7 @@
                     border: 1px solid rgba(0, 0, 0, 0.26);
                     padding: 20px 10px;
                     border-radius: 10px;
+                    overflow: hidden;
 
                     .img-wrap {
                         display: flex;
@@ -88,7 +89,7 @@
                         max-width: 900px;
                         max-height: 300px;
 
-                        overflow: hidden;
+                        
 
                         img {
                             // display: flex;
