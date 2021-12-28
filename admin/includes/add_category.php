@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Add Category</h1>
+<h1>Add post category</h1>
     <div class="table-wrap">
         <div class="form-wrap">
         <?php
@@ -16,7 +16,7 @@
 
         ?>
             <form action="" method="post">
-                <h3>Add category</h3>
+                <h3>Add post category</h3>
                 <div class="form-group">
                     <label for="">Category name</label>
                    

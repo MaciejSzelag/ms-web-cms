@@ -14,71 +14,36 @@
             <?php 
         
 
-            $posts = new Posts();
-            $select_all_posts = $posts->select_all("posts");
-            $rows = new Posts();
+           
+            $select_all_posts = $posts->select_all_posts();
+            // $rows = new Post();
 
             while($row = mysqli_fetch_assoc($select_all_posts)){
-                $rows->all_rows($row);
+                $posts->all_rows($row);
             ?>
 
 
-                <a href="">
-                    <!-- <div class="blog-box">
+                <a href="post.php?post_id=<?php echo $posts->id; ?>">
+                    <div class="blog-box">
                         <div class="box-img">
                             <div class="img-wrap">
-                                <img src="images/<?php echo $rows->image; ?> " alt="">
+                                <img src="images/<?php echo $posts->image; ?> " alt="">
                             </div>
                         </div>
                         <div class="box-content">
-                            <h1><?php echo $rows->title; ?></h1>
-                            <p> <?php echo substr($rows->content, 0,350);?>...</p>
-                            <span>Published: <?php echo $rows->published; ?> by <?php echo $rows->author; ?></span>
+                            <h1><?php echo $posts->title; ?></h1>
+                            <p> <?php echo substr($posts->content, 0,350);?>...</p>
+                            <span>Published: <?php echo $posts->published; ?> by <?php echo $posts->author; ?></span>
                         </div>
 
 
 
-                    </div> -->
+                    </div>
                 </a>
             <?php } ?>
-                <a href="">
-                    <div class="blog-box">
-                        <div class="box-img">
-                            <div class="img-wrap">
-                                <img src="images/laptop-startup_640-640.png" alt="">
-                            </div>
-                        </div>
-                        <div class="box-content">
-                            <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid praesentium eaque laudantium saepe quo nulla, odio dolores tenetur doloremque in hic nostrum et porro veniam illo vitae. Nesciunt, hic?</p>
-                            <span>Published: 12/12/2021</span>
-                        </div>
+        
 
-
-
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="blog-box">
-                        <div class="box-img">
-                            <div class="img-wrap">
-                                <img src="images/portfolio_640.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="box-content">
-                            <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid praesentium eaque laudantium saepe quo nulla, odio dolores tenetur doloremque in hic nostrum et porro veniam illo vitae. Nesciunt, hic?</p>
-                            <span>Published: 12/12/2021</span>
-                        </div>
-
-
-
-                    </div>
-                </a>
-
-
-
+        
             </div>
 
 

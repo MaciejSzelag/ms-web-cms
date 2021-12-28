@@ -1,6 +1,6 @@
 <?php include "../includes/db.php"; ?>
 <?php include "functions.php"; ?>
-<?php include "contactform/classes.php"; ?>
+<?php include "class/Classes.php"; ?>
 <?php ob_start();?>
 <?php session_start(); ?>
 <?php

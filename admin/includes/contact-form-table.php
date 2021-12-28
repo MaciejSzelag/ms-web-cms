@@ -5,11 +5,11 @@
         <div class="table">
                     <div class="tbody">
                 <?php
-                    $query = orderByDescending('msweb_contact_form','visitor_id');
-                    $select_visitor_messages = select_query($query);
+                    $select_msgs = $msg_rows->orderByDescending();
+                    // $select_visitor_messages = select_query($query);
            
-                    while($row = $fetch_assoc->fetch_assoc($select_visitor_messages)){
-                          $msg_rows->rows_all_only($row);     
+                    while($row = mysqli_fetch_assoc($select_msgs)){
+                          $msg_rows->contact_form_rows($row);     
                 ?>
 
                 <div class=" <?php echo $msg_rows->msg_status; ?> tr">

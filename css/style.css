@@ -2189,8 +2189,6 @@ header .header-wrap .header-part .img-container .img-2 {
           align-items: center;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 80%, 0 0);
-          clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 80%, 0 0);
 }
 
 .post-wrap .post-head .post-bg-image img {

@@ -1,8 +1,10 @@
 <?php include "includes/db.php";?>
 <?php include "admin/functions.php"; ?>
-<?php include "class/classes.php"; ?>
+<?php include "admin/class/Classes.php"; ?>
 <?php session_start(); ?>
-
+<?php 
+$posts = new Post();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
